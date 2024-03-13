@@ -30,3 +30,7 @@ for france_travail in france_travail :
 
 df = pd.DataFrame({"Poste" : titles_clean , "Lieu" : adress_clean , "Description" : description_clean, "Contrat" : type_contrat_clean})
 df
+# Convertir le DataFrame en fichier CSV
+df.to_csv("france_travail_offres.csv", index=False)
+
+print("Le fichier CSV a été créé avec succès.")
